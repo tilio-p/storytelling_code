@@ -30,7 +30,7 @@
   );
 }
 
-.slider-mask {
+.l-slider-mask {
   overflow: hidden;
   height: 100vh;
 }
@@ -44,7 +44,7 @@
   display: flex;
 }
 
-.slider-container .montagne-paysage img {
+.l-slider-container .montagne-paysage img {
   margin-top: 2%;
   width: 110%;
   height: 50%;
@@ -123,4 +123,84 @@
   height: 350px;
   top: 50%;
   left: 70%;
+}
+
+.l-grotte img {
+  object-fit: cover;
+  width: 100%;
+  height: 50%;
+  position: relative;
+  z-index: 1;
+}
+
+.l-planet img {
+  max-width: 50%;
+  position: relative;
+  bottom: 50%;
+  top: -70%;
+  left: 56%;
+  z-index: -1;
+  margin-top: -75%;
+  margin-left: -55%;
+}
+
+.l-parallax-container {
+  height: calc(100vh - 40px);
+  margin-block: 10px;
+  padding: 10px;
+  border: 5px solid black;
+  border-radius: 10px;
+  background: rgba(30, 25, 36, 0.8);
+  position: relative;
+}
+
+.l-parallax-element {
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#element-1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 70%;
+}
+
+#element-2 {
+  position: absolute;
+  bottom: 20px;
+  left: 40px;
+  width: 25%;
+  height: 40%;
+}
+
+#element-3 {
+  position: absolute;
+  bottom: 30px;
+  right: 100px;
+  width: 10%;
+  height: 10%;
+}
+
+#template,
+#path {
+  fill: none;
+}
+
+#template {
+  stroke-width: 5px;
+  stroke: #444;
+}
+
+#element-2 {
+  display: flex;
+  flex-direction: column;
+}
+
+#element-3 {
+  display: flex;
+  flex-direction: column;
 }
