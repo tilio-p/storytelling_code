@@ -1,5 +1,10 @@
+.l-container {
+  min-height: 200vh;
+  margin-top: 10%;
+}
+
 .l-background {
-  background-image: url(../img/ciel\ 1.png);
+  background-image: url(../img/ciel.png);
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
@@ -12,6 +17,19 @@
   padding-top: 30%;
   padding-bottom: 5%;
   flex-direction: column;
+}
+
+.l-object-wrapper {
+  display: flex;
+  margin: 100px 0;
+}
+
+.l-object {
+  border: 5px solid blue;
+  width: 30%;
+  height: 200px;
+  opacity: 1;
+  border-radius: 10px;
 }
 
 .l-spacer {
