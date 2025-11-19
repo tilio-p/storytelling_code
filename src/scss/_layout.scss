@@ -1,3 +1,5 @@
+// layout général
+
 .l-container {
   min-height: 200vh;
   margin-top: 10%;
@@ -191,43 +193,6 @@
   margin-left: -55%;
 }
 
-.l-parallax-container {
-  height: calc(100vh - 40px);
-  margin-block: 10px;
-  padding: 10px;
-  background: black;
-  position: relative;
-  display: flex;
-  flex-direction: row;
-}
-
-.l-parallax-element {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#element-1 {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
-#element-2 {
-  position: absolute;
-  bottom: 20px;
-  left: 40px;
-  width: 25%;
-  height: 40%;
-}
-
-#element-3 {
-  position: absolute;
-  bottom: 30px;
-  right: 100px;
-}
-
 #template,
 #path {
   fill: none;
@@ -238,11 +203,7 @@
   stroke: #444;
 }
 
-#element-2 {
-  display: flex;
-  flex-direction: column;
-  gap: 80px;
-}
+// layout images oiseaux
 
 #oiseau-1 img {
   width: 150%;
@@ -288,8 +249,50 @@
   z-index: 0;
 }
 
-.l-texte {
-  display: flex;
-  flex-direction: column;
-  gap: 110px;
-}
+// layout footer
+
+// .l-parallax-container {
+//   height: calc(100vh - 40px);
+//   margin-block: 10px;
+//   padding: 10px;
+//   background: black;
+//   position: relative;
+//   display: flex;
+//   flex-direction: row;
+// }
+
+// .l-parallax-element {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
+
+// #element-1 {
+//   position: absolute;
+//   bottom: 0;
+//   left: 0;
+//   right: 0;
+// }
+
+// #element-2 {
+//   position: absolute;
+//   bottom: 20px;
+//   left: 40px;
+//   width: 25%;
+//   height: 40%;
+//   display: flex;
+//   flex-direction: column;
+//   gap: 80px;
+// }
+
+// #element-3 {
+//   position: absolute;
+//   bottom: 30px;
+//   right: 100px;
+// }
+
+// .l-texte {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 110px;
+// }
