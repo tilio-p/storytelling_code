@@ -182,26 +182,26 @@ gsap.to(".l-planet", {
 gsap
   .timeline({
     scrollTrigger: {
-      trigger: ".l-parallax-container",
-      start: "top top",
+      trigger: ".container-footer",
+      start: "center",
       scrub: 2,
       pin: true,
     },
   })
   .to("#element-3", {
-    y: -100,
+    y: +100,
   })
   .to(
     "#element-1",
     {
-      y: -300,
+      y: +400,
     },
     0
   )
   .to(
     "#element-2",
     {
-      y: -400,
+      y: +500,
     },
     0
   );
