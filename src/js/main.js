@@ -4,21 +4,16 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-gsap
-  // Anime l'objet  lorsque son centre arrive en bas du viewport
-  // Il devient visible et est déplacé horizontalement de 25%
-  .to("#oiseau-1", {
-    opacity: 1,
-    x: "150%",
-    scrollTrigger: {
-      trigger: "#oiseau-1",
-      start: "top bottom",
-      scrub: 1,
-    },
-  });
+gsap.to("#oiseau-1", {
+  opacity: 1,
+  x: "150%",
+  scrollTrigger: {
+    trigger: "#oiseau-1",
+    start: "top bottom",
+    scrub: 1,
+  },
+});
 
-// Anime l'objet  lorsque son centre arrive en bas du viewport
-// Il devient visible et est déplacé horizontalement de -25%
 gsap.to("#title", {
   opacity: 1,
   y: "-150%",
@@ -66,7 +61,6 @@ gsap.to("#oiseau-4", {
   },
 });
 
-// Crée un effet de scroll horizontal
 gsap.to(".l-montagne-paysage", {
   opacity: 1,
   y: "10%",
@@ -206,8 +200,6 @@ gsap
     0
   );
 
-// Draw the SVG
-// Based on https://scrollmagic.io/examples/advanced/svg_drawing.html
 function pathPrepare(el) {
   const lineLength = el.getTotalLength();
   el.style.strokeDasharray = lineLength;
@@ -216,7 +208,6 @@ function pathPrepare(el) {
 
 const svgPath = document.querySelector("#template");
 
-// prepare SVG
 pathPrepare(svgPath);
 
 gsap.to(svgPath, {
@@ -228,4 +219,60 @@ gsap.to(svgPath, {
     scrub: 2,
     pin: true,
   },
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const globalDocument = document.querySelector("html");
+  const popup = document.getElementById("js-popup");
+  const popup2 = document.getElementById("js-popup2");
+  const popup3 = document.getElementById("js-popup3");
+  const bison = document.querySelector("#item-2 img");
+  const bisonover = document.querySelector(".popup-overlay");
+  const tigre = document.querySelector("#item-4 img");
+  const tigreover = document.querySelector(".popup-overlay2");
+  const singe = document.querySelector("#item-6 img");
+  const singeover = document.querySelector(".popup-overlay3");
+
+  bison.addEventListener("click", function (e) {
+    // Ouvrir popup si clic sur l'image
+    popup.classList.add("active");
+    globalDocument.classList.add("no-scroll"); // bloque scroll
+
+    // Fermer popup si clic sur le fond (overlay)
+    bisonover.addEventListener("click", function (e) {
+      // Ouvrir popup si clic sur l'image
+      popup.classList.remove("active");
+      globalDocument.classList.remove("no-scroll"); // bloque scroll
+    });
+  });
+
+  tigre.addEventListener("click", function (e) {
+    popup2.classList.add("active");
+    globalDocument.classList.add("no-scroll"); // bloque scroll
+
+    tigreover.addEventListener("click", function (e) {
+      popup2.classList.remove("active");
+      globalDocument.classList.remove("no-scroll"); // bloque scroll
+    });
+  });
+
+  singe.addEventListener("click", function (e) {
+    popup3.classList.add("active");
+    globalDocument.classList.add("no-scroll"); // bloque scroll
+
+    singeover.addEventListener("click", function (e) {
+      popup3.classList.remove("active");
+      globalDocument.classList.remove("no-scroll"); // bloque scroll
+    });
+  });
+
+  document.addEventListener("keydown", function (e) {
+    if (
+      (e.key === "Escape" || e.key === "Esc") &&
+      popup.classList.contains("active")
+    ) {
+      popup.classList.remove("active");
+      document.documentElement.style.overflow = "";
+    }
+  });
 });

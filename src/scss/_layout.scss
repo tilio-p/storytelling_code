@@ -40,14 +40,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  // border-radius: 10px;
-  // background: repeating-linear-gradient(
-  //   45deg,
-  //   #606dbc33,
-  //   #606dbc33 10px,
-  //   #606dbc00 10px,
-  //   #606dbc00 20px
-  // );
 }
 
 .l-slider-mask {
@@ -94,6 +86,14 @@
   flex-shrink: 0;
   position: relative;
   z-index: 1;
+}
+
+.l-slider-container {
+  pointer-events: none;
+}
+
+.l-slider-container .l-slider-item img {
+  pointer-events: auto;
 }
 
 //animaux plaine
@@ -226,51 +226,3 @@
 .l-object#oiseau-4 {
   z-index: 0;
 }
-
-// layout footer
-
-// .l-parallax-container {
-//   height: calc(100vh - 40px);
-//   margin-block: 10px;
-//   padding: 10px;
-//   background: black;
-//   position: relative;
-//   display: flex;
-//   flex-direction: row;
-// }
-
-// .l-parallax-element {
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-// }
-
-// #element-1 {
-//   position: absolute;
-//   bottom: 0;
-//   left: 0;
-//   right: 0;
-// }
-
-// #element-2 {
-//   position: absolute;
-//   bottom: 20px;
-//   left: 40px;
-//   width: 25%;
-//   height: 40%;
-//   display: flex;
-//   flex-direction: column;
-//   gap: 80px;
-// }
-
-// #element-3 {
-//   position: absolute;
-//   bottom: 30px;
-//   right: 100px;
-// }
-
-// .l-texte {
-//   display: flex;
-//   flex-direction: column;
-//   gap: 110px;
-// }

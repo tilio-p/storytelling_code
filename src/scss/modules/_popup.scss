@@ -1,0 +1,54 @@
+.popup-overlay {
+  position: fixed;
+  inset: 0; /* couvre tout l’écran */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10000;
+}
+
+.popup-overlay.active {
+  display: block;
+  z-index: 10000;
+}
+.popup-image {
+  width: 90%;
+  z-index: 10000;
+  margin-left: 5%;
+}
+
+// classe pour bloquer le scroll
+html.no-scroll {
+  overflow: hidden;
+}
+
+.popup-overlay2 {
+  position: fixed;
+  inset: 0; /* couvre tout l’écran */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10000;
+}
+
+.popup-overlay2.active {
+  display: block;
+  z-index: 10000;
+}
+
+.popup-overlay3 {
+  position: fixed;
+  inset: 0; /* couvre tout l’écran */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10000;
+}
+
+.popup-overlay3.active {
+  display: block;
+  z-index: 10000;
+}
